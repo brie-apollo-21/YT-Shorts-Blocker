@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "YT Shorts Blocker",
+    "description": "An extension to block YouTube shorts from showing up on your recommended feed.",
+    "version": "1.0.1",
+    "icons": {
+        "16": "icon_small.png",
+        "32": "icon_small.png",
+        "48": "icon_large.png",
+        "128": "icon_large.png"
+    },
+    "action": {
+        "default_icon": "icon_small.png",
+        "default_popup": "index.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.youtube.com/*"],
+            "js": ["index.js"]
+        }
+    ]
+}
